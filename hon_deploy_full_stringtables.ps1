@@ -8,15 +8,91 @@ param(
 
 $ErrorActionPreference = "Stop"
 
+# --- Path resolution: override > auto-detect > defaults ---
+
 $pathsOverride = Join-Path $PSScriptRoot "hon_paths_override.ps1"
 if (Test-Path $pathsOverride) {
     . $pathsOverride
 }
 
+function Find-HoNDocsRoot {
+    # Look for the folder that contains startup.cfg
+    $searchRoots = @(
+        (Join-Path $env:USERPROFILE "Documents\Juvio\Heroes of Newerth"),
+        (Join-Path $env:USERPROFILE "Documents\Heroes of Newerth"),
+        (Join-Path $env:USERPROFILE "AppData\Local\Juvio\Heroes of Newerth")
+    )
+    foreach ($candidate in $searchRoots) {
+        if (Test-Path (Join-Path $candidate "startup.cfg")) { return $candidate }
+    }
+    # Deep search under common parents
+    $deepRoots = @(
+        (Join-Path $env:USERPROFILE "Documents"),
+        (Join-Path $env:USERPROFILE "AppData\Local")
+    )
+    foreach ($root in $deepRoots) {
+        if (-not (Test-Path $root)) { continue }
+        $hit = Get-ChildItem -Path $root -Recurse -Filter "startup.cfg" -ErrorAction SilentlyContinue |
+               Where-Object { $_.DirectoryName -match "(?i)heroes.of.newerth" } |
+               Select-Object -First 1
+        if ($hit) { return $hit.DirectoryName }
+    }
+    return $null
+}
+
+function Find-HoNLocalRoot {
+    # Look for the folder that contains resources0.jz
+    $searchRoots = @(
+        (Join-Path $env:USERPROFILE "AppData\Local\Juvio\heroes of newerth"),
+        "C:\Games\Juvio\heroes of newerth",
+        "D:\Games\Juvio\heroes of newerth",
+        "C:\Program Files\Juvio\heroes of newerth",
+        "C:\Program Files (x86)\Juvio\heroes of newerth",
+        "D:\Juvio\heroes of newerth",
+        "C:\Juvio\heroes of newerth"
+    )
+    foreach ($candidate in $searchRoots) {
+        if (Test-Path (Join-Path $candidate "resources0.jz")) { return $candidate }
+    }
+    # Scan all drive roots for Juvio
+    Get-PSDrive -PSProvider FileSystem | ForEach-Object {
+        $tryPath = Join-Path $_.Root "Juvio\heroes of newerth"
+        if (Test-Path (Join-Path $tryPath "resources0.jz")) { return $tryPath }
+        $tryPath2 = Join-Path $_.Root "Games\Juvio\heroes of newerth"
+        if (Test-Path (Join-Path $tryPath2 "resources0.jz")) { return $tryPath2 }
+    }
+    return $null
+}
+
 $defaultDocsRoot = Join-Path $env:USERPROFILE "Documents\Juvio\Heroes of Newerth"
 $defaultLocalRoot = Join-Path $env:USERPROFILE "AppData\Local\Juvio\heroes of newerth"
-$docsRoot = if ($HoNDocsRoot) { $HoNDocsRoot } else { $defaultDocsRoot }
-$localRoot = if ($HoNLocalRoot) { $HoNLocalRoot } else { $defaultLocalRoot }
+
+if ($HoNDocsRoot) {
+    $docsRoot = $HoNDocsRoot
+} else {
+    $autoDocsRoot = Find-HoNDocsRoot
+    if ($autoDocsRoot) {
+        $docsRoot = $autoDocsRoot
+        Write-Host "Auto-detected DocsRoot: $docsRoot"
+    } else {
+        $docsRoot = $defaultDocsRoot
+    }
+}
+
+if ($HoNLocalRoot) {
+    $localRoot = $HoNLocalRoot
+} else {
+    $autoLocalRoot = Find-HoNLocalRoot
+    if ($autoLocalRoot) {
+        $localRoot = $autoLocalRoot
+        Write-Host "Auto-detected LocalRoot: $localRoot"
+    } else {
+        $localRoot = $defaultLocalRoot
+    }
+}
+
+Write-Host "DocsRoot:  $docsRoot"
+Write-Host "LocalRoot: $localRoot"
 
 $trackedBases = @(
     "entities",
