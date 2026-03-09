@@ -1,0 +1,39 @@
+﻿{
+    "captured_at":  "2026-03-09T05:14:03",
+    "archive_path":  "C:\\Users\\Maxim\\AppData\\Local\\Juvio\\heroes of newerth\\resources0.jz",
+    "archive_size":  3889817786,
+    "archive_last_write_utc":  "2026-03-08T23:09:54",
+    "archive_sha256":  "A8D9BBF5A92EB50BF08D44473A976004DADCAE0A26E49A255A209BF8D39845F4",
+    "tracked_files":  [
+                          {
+                              "archive_entry":  "stringtables\\entities_en.str",
+                              "name":  "entities_en.str",
+                              "size":  1512187,
+                              "sha256":  "C95B9EB87E53B0CF091B5F78B7E6149E5FF1C6767BAF56DD06326ECEB4140273"
+                          },
+                          {
+                              "archive_entry":  "stringtables\\interface_en.str",
+                              "name":  "interface_en.str",
+                              "size":  524180,
+                              "sha256":  "0FA491D7FAD45525148E7FBC1CD90FE39AB027C8880B03519F1766129F7647EB"
+                          },
+                          {
+                              "archive_entry":  "stringtables\\client_messages_en.str",
+                              "name":  "client_messages_en.str",
+                              "size":  50171,
+                              "sha256":  "916E418B7A7E425F45510CC70EA5E18BE24208EC32EB830562F938A5E515E057"
+                          },
+                          {
+                              "archive_entry":  "stringtables\\game_messages_en.str",
+                              "name":  "game_messages_en.str",
+                              "size":  56910,
+                              "sha256":  "4592F4FC515CE19226414C7EB61A31597B8EEF32A4541C3723474BC26EA4A580"
+                          },
+                          {
+                              "archive_entry":  "stringtables\\bot_messages_en.str",
+                              "name":  "bot_messages_en.str",
+                              "size":  9775,
+                              "sha256":  "7B75D36A0ECE92B1D86E9F4265F6A21342ABC4C79C09993C3AC120574D73EACB"
+                          }
+                      ]
+}

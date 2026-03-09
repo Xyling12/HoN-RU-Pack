@@ -1,0 +1,67 @@
+﻿{
+    "mode":  "apply",
+    "input_dir":  "C:\\Users\\Maxim\\.gemini\\antigravity\\scratch\\hon_tmp_pack\\stringtables",
+    "run_output_dir":  "C:\\Users\\Maxim\\.gemini\\antigravity\\scratch\\hon_tmp_pack\\stringtables\\qc_all_apply_bundle_20260309_095307",
+    "files":  [
+                  {
+                      "file":  "entities_en.str",
+                      "mode":  "apply",
+                      "total_processed_lines":  2978,
+                      "total_suggested_replacements":  980,
+                      "total_applied_replacements":  679,
+                      "total_errors":  0,
+                      "summary":  "C:\\Users\\Maxim\\.gemini\\antigravity\\scratch\\hon_tmp_pack\\stringtables\\qc_entities_en_apply_20260309_095307\\summary.json",
+                      "output_dir":  "C:\\Users\\Maxim\\.gemini\\antigravity\\scratch\\hon_tmp_pack\\stringtables\\qc_entities_en_apply_20260309_095307",
+                      "final_output":  "C:\\Users\\Maxim\\.gemini\\antigravity\\scratch\\hon_tmp_pack\\stringtables\\qc_entities_en_apply_20260309_095307\\entities_en.qc_apply.final.str",
+                      "collected_output":  "C:\\Users\\Maxim\\.gemini\\antigravity\\scratch\\hon_tmp_pack\\stringtables\\qc_all_apply_bundle_20260309_095307\\entities_en.str"
+                  },
+                  {
+                      "file":  "interface_en.str",
+                      "mode":  "apply",
+                      "total_processed_lines":  7034,
+                      "total_suggested_replacements":  667,
+                      "total_applied_replacements":  397,
+                      "total_errors":  0,
+                      "summary":  "C:\\Users\\Maxim\\.gemini\\antigravity\\scratch\\hon_tmp_pack\\stringtables\\qc_interface_en_apply_20260309_101608\\summary.json",
+                      "output_dir":  "C:\\Users\\Maxim\\.gemini\\antigravity\\scratch\\hon_tmp_pack\\stringtables\\qc_interface_en_apply_20260309_101608",
+                      "final_output":  "C:\\Users\\Maxim\\.gemini\\antigravity\\scratch\\hon_tmp_pack\\stringtables\\qc_interface_en_apply_20260309_101608\\interface_en.qc_apply.final.str",
+                      "collected_output":  "C:\\Users\\Maxim\\.gemini\\antigravity\\scratch\\hon_tmp_pack\\stringtables\\qc_all_apply_bundle_20260309_095307\\interface_en.str"
+                  },
+                  {
+                      "file":  "client_messages_en.str",
+                      "mode":  "apply",
+                      "total_processed_lines":  196,
+                      "total_suggested_replacements":  18,
+                      "total_applied_replacements":  18,
+                      "total_errors":  0,
+                      "summary":  "C:\\Users\\Maxim\\.gemini\\antigravity\\scratch\\hon_tmp_pack\\stringtables\\qc_client_messages_en_apply_20260309_111040\\summary.json",
+                      "output_dir":  "C:\\Users\\Maxim\\.gemini\\antigravity\\scratch\\hon_tmp_pack\\stringtables\\qc_client_messages_en_apply_20260309_111040",
+                      "final_output":  "C:\\Users\\Maxim\\.gemini\\antigravity\\scratch\\hon_tmp_pack\\stringtables\\qc_client_messages_en_apply_20260309_111040\\client_messages_en.qc_apply.final.str",
+                      "collected_output":  "C:\\Users\\Maxim\\.gemini\\antigravity\\scratch\\hon_tmp_pack\\stringtables\\qc_all_apply_bundle_20260309_095307\\client_messages_en.str"
+                  },
+                  {
+                      "file":  "game_messages_en.str",
+                      "mode":  "apply",
+                      "total_processed_lines":  486,
+                      "total_suggested_replacements":  36,
+                      "total_applied_replacements":  20,
+                      "total_errors":  0,
+                      "summary":  "C:\\Users\\Maxim\\.gemini\\antigravity\\scratch\\hon_tmp_pack\\stringtables\\qc_game_messages_en_apply_20260309_111210\\summary.json",
+                      "output_dir":  "C:\\Users\\Maxim\\.gemini\\antigravity\\scratch\\hon_tmp_pack\\stringtables\\qc_game_messages_en_apply_20260309_111210",
+                      "final_output":  "C:\\Users\\Maxim\\.gemini\\antigravity\\scratch\\hon_tmp_pack\\stringtables\\qc_game_messages_en_apply_20260309_111210\\game_messages_en.qc_apply.final.str",
+                      "collected_output":  "C:\\Users\\Maxim\\.gemini\\antigravity\\scratch\\hon_tmp_pack\\stringtables\\qc_all_apply_bundle_20260309_095307\\game_messages_en.str"
+                  },
+                  {
+                      "file":  "bot_messages_en.str",
+                      "mode":  "apply",
+                      "total_processed_lines":  9,
+                      "total_suggested_replacements":  1,
+                      "total_applied_replacements":  0,
+                      "total_errors":  0,
+                      "summary":  "C:\\Users\\Maxim\\.gemini\\antigravity\\scratch\\hon_tmp_pack\\stringtables\\qc_bot_messages_en_apply_20260309_111601\\summary.json",
+                      "output_dir":  "C:\\Users\\Maxim\\.gemini\\antigravity\\scratch\\hon_tmp_pack\\stringtables\\qc_bot_messages_en_apply_20260309_111601",
+                      "final_output":  "C:\\Users\\Maxim\\.gemini\\antigravity\\scratch\\hon_tmp_pack\\stringtables\\qc_bot_messages_en_apply_20260309_111601\\bot_messages_en.qc_apply.final.str",
+                      "collected_output":  "C:\\Users\\Maxim\\.gemini\\antigravity\\scratch\\hon_tmp_pack\\stringtables\\qc_all_apply_bundle_20260309_095307\\bot_messages_en.str"
+                  }
+              ]
+}
